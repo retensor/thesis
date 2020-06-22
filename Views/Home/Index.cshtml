@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .subheader{
+        font-size: small;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1>Rumour Generator</h1>
+    <p class="subheader">This generator is used for educational and research purposes only.</p>
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Datetime Degree</h2>
+        <p>Please enter a time and date:</p>
+        <input type="time">
+        <input type="date">
+        <br /><br />
+        <p>Or please choose an option below:</p>
+        <input type="radio" id="date1" name="date" value="1">
+        <label for="date1">1 day ago</label><br>
+        <input type="radio" id="date2" name="date" value="7">
+        <label for="date2">1 week ago</label><br>
+        <input type="radio" id="date3" name="date" value="30">
+        <label for="date3">1 month ago</label><br>
+        <input type="radio" id="date4" name="date" value="365">
+        <label for="date4">1 year ago</label><br>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Numerical Degree</h2>
+        <p>The base numerical degree is 10. The options provided are scalar multipliers. For example, if you pick a scalar of "10" then the degree will be 100.</p>
+        <div style="display: inline-block">Scalar multiplier:</div>
+        <div style="display: inline-block">
+            <br />
+            <select id="numerical-degree">
+                <option value="0.1">0.1</option>
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="100">100</option>
+                <option value="1000">1000</option>
+            </select>
+        </div>
+    </div>
+
+        <div class="col-md-4">
+            <h2>Location Degree</h2>
+            <p>The location degree uses a scale from 1-5. This is what each degree represents:</p>
+            <p>1) Local</p>
+            <p>2) City</p>
+            <p>3) State</p>
+            <p>4) National</p>
+            <p>5) International</p>
+
+            <div style="display: inline-block">Location degree:</div>
+            <div style="display: inline-block">
+                <br />
+                <select id="location-degree">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <br />
+            <br />
+            <p>Click the button below to generate a rumour:</p>
+            <p><a class="btn btn-default">Generate</a></p>
+        </div>
+    </div>
